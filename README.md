@@ -1,1 +1,3 @@
-# dAPI
+# dAPI  D-Guilds API
+
+This repository will contain the D-sek backend. To be continued...
