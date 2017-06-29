@@ -2,6 +2,9 @@
 
 If you want to make contributions to the D-Guild Webpage please read this document first. To keep the code base clean and easy to read we have some basic rules that needs to be followed. 
 
+# Issue handling
+When starting development on something, please assign yourself to the issue you are doing (If one does not exist, create on).
+
 # Code standard 
 Download the ES Lint config, and make sure your editor use it.
 
