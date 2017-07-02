@@ -1,7 +1,7 @@
 
 const databaseConfiguration = {
     host     : 'localhost',
-    user     : 'dapi',
+    user     : 'root',
     password : '',
     database : 'dapi'
 };
