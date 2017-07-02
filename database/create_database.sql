@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS posts(
   text VARCHAR (255) NOT NULL,
   imgPath VARCHAR (1000),
   link VARCHAR (1000),
-  date DATETIME DEFAULT CURRENT_TIMESTAMP ,
+  date DATETIME,
   PRIMARY KEY (id),
   FOREIGN KEY (userId) REFERENCES users(id)
 );
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS photos(
   galleryId INTEGER NOT NULL,
   title VARCHAR (255),
   description TEXT,
-  date DATETIME DEFAULT CURRENT_TIMESTAMP ,
+  date DATETIME,
   photoLink VARCHAR (1000),
   PRIMARY KEY (id),
   FOREIGN KEY (galleryId) REFERENCES photoGalleries(id)
