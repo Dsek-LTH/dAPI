@@ -4,4 +4,4 @@ service:
   - mysql
 
 before_script:
-  - mysql < ./database/crete_database.sql
+  - mysql < ./database/create_database.sql
