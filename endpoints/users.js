@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var db = require('../Database');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET a user from the database. */
+router.get('/:id', function(req, res, next) {
+  db.getUser(req.query,function (callback) {
+    res.writeHead(200,{'Content-Type':'application/json'});
+    res.end(JSON.stringify(callback));
+  })
 });
 
 module.exports = router;
