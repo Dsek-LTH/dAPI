@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cluster = require('cluster');
-var debug = require('debug')('gapi:server');
+var debug = require('debug')('dapi:server');
 var http = require('http');
 
 
