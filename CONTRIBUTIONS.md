@@ -26,3 +26,13 @@ Example for users:
 * get one user: GET /users/:id
 * update user: PUT /users/:id
 * delete user: DELETE /users/:id
+
+## Database
+The database is a mysql database configured to use the ORM (Object-relational mapping). This is some what different then
+ a traditional database since it uses an objekt oriented approach. To support this development process we are using 
+ a module called Sequalize. (http://docs.sequelizejs.com)
+ 
+ Changes to the database structure is done via the concept of migrations. This means that each change is described in a 
+ so called migration file. To be able to use all features please install the following: (http://docs.sequelizejs.com/manual/tutorial/migrations.html)
+ 
+ Then use the generation feature to make the changes you want. More detailed instructions are coming.
