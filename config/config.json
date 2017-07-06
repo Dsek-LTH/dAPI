@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dapi",
+    "password": "password",
+    "database": "dapi_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "dapi",
+    "password": "password",
+    "database": "dapi_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "dapi",
+    "password": "password",
+    "database": "dapi_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

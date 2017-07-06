@@ -1,53 +1,18 @@
-var mysql = require('mysql');
-// the Database connection information goes here
-var dbConfig = {
-  host: "",
-  user: "",
-  password: "",
-  database: ""
-};
-
-var con;
-
-function query(sql,values,callback){ 
-  con = mysql.createConnection(dbConfig);
-  con.query(sql, [values], function (err, result,fields) {
-    if(err)
-      throw err; 
-    else
-      callback(result);
-  });
-  con.end();
-}
-
-module.exports = {
-
-  exampleUsage: function(body,callback){
-    var sql = "";
-    var params = [];
-    query(sql,param,callback);
-  },
-
-  createUser : function(body,callback){
-
-  },
-
-  getUser : function (params,callback) {
-    var sql = "select * from user where id = ?";
-    var values= [params.id];
-    console.log("Pre query")
-    query(sql,values,callback);
-  },
-
-  GiveRoleToUser : function (body,callback) {
-
-  },
-
-  CreatePost : function (body,callback) {
-
-  },
-
-  AddTagToPost : function (body,callback) {
-
+const Sequelize = require ("sequelize");
+const sequelize = new Sequelize('dapi','dapi','password',{
+  host: 'localhost',
+  dialect: 'mysql',
+  pool : {
+    max: 5,
+    min:0,
+    idle:10000
   }
-}
+});
+
+sequelize.authenticate().then(()=> {
+  console.log("con has been established");
+}).catch(err => {
+  console.error("unable to connect", err);
+});
+
+module.exports = sequelize;
