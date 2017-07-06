@@ -18,6 +18,7 @@ module.exports = {
         },
         creator: {
           type: Sequelize.INTEGER,
+          allowNull: false,
           references: {
             model: 'users',
             key: 'id'
