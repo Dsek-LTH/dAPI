@@ -11,11 +11,5 @@ describe('Array', function() {
 
 describe('#Database.js', function () {
   it('Should return a row containing all the information of a user', function () {
-    var query = {"id":"1"};
-    var answer = 0;
-    db.getUser(query,function (callback) {
-      answer = callback;
-    });
-    assert.equal(1,answer);
   });
 });
